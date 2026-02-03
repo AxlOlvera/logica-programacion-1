@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenador de Números | Lógica de Programación</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🔢 Ordenador de Números</h1>
+            <p class="subtitle">Ingresa 3 números y descubre su orden</p>
+        </header>
+
+        <!-- Formulario de entrada -->
+        <section class="input-section">
+            <div class="form-card">
+                <h2>Ingresa tus números</h2>
+                <form id="numeroForm">
+                    <div class="input-group">
+                        <label for="numeroInput">Número <span id="numeroCount">1</span> de 3:</label>
+                        <input 
+                            type="text" 
+                            id="numeroInput" 
+                            placeholder="Ejemplo: 4 o 2.5" 
+                            autocomplete="off"
+                            autofocus
+                        >
+                        <small class="input-hint">Puedes ingresar números enteros o decimales</small>
+                    </div>
+                    <button type="submit" class="btn-primary">Agregar Número</button>
+                </form>
+                
+                <!-- Contador de progreso -->
+                <div class="progress-indicator">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p class="progress-text">Números ingresados: <span id="progressText">0/3</span></p>
+                </div>
+
+                <!-- Botón de reinicio (oculto al inicio) -->
+                <button id="btnReiniciar" class="btn-secondary" style="display: none;">
+                    🔄 Reiniciar
+                </button>
+            </div>
+        </section>
+
+        <!-- Área de tarjetas de números ingresados -->
+        <section class="numeros-ingresados" id="numerosIngresados" style="display: none;">
+            <h3>Números Ingresados:</h3>
+            <div class="tarjetas-container" id="tarjetasContainer">
+                <!-- Aquí se inyectarán las tarjetas dinámicamente -->
+            </div>
+        </section>
+
+        <!-- Mensaje de números iguales -->
+        <div class="mensaje-iguales" id="mensajeIguales" style="display: none;">
+            <p>⚠️ ¡Tienes números iguales!</p>
+        </div>
+
+        <!-- Área de resultados ordenados -->
+        <section class="resultados" id="resultados" style="display: none;">
+            <h3>Resultados:</h3>
+            
+            <!-- Fila: Mayor a Menor -->
+            <div class="resultado-grupo">
+                <h4>📉 De Mayor a Menor:</h4>
+                <div class="tarjetas-ordenadas" id="mayorAMenor">
+                    <!-- Se inyectarán las tarjetas ordenadas -->
+                </div>
+            </div>
+
+            <!-- Fila: Menor a Mayor -->
+            <div class="resultado-grupo">
+                <h4>📈 De Menor a Mayor:</h4>
+                <div class="tarjetas-ordenadas" id="menorAMayor">
+                    <!-- Se inyectarán las tarjetas ordenadas -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Creado con 💙 para Lógica de Programación</p>
+        </footer>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
